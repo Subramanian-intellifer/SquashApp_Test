@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <include
+        android:id="@+id/toolBarInclude"
+        layout="@layout/tool_bar_layout"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/profileImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBarInclude"
+        android:src="@drawable/sample_profile_image"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/black"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileNameTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImageView"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:text="@string/eleanor_pena"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/white"
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileIdTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileNameTextView"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/white"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileBioTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileIdTextView"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:text="Persons bio data \n Loreum ipsum dolor sit amet, cons"
+        android:gravity="center"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/linearLayoutMainActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileBioTextView"
+        android:orientation="horizontal"
+        android:weightSum="7">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/followersCountTextView"
+                android:text="10K"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/pale_green"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/followers_TextView"
+                android:text="@string/followers"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_margin="5dp">
+
+          <View
+              android:layout_width="1dp"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:background="@color/pale_green"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/followingCountTextView"
+                android:text="1.1K"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/pale_green"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/following_TextView"
+                android:text="@string/following"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_margin="5dp">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_green"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewsCountTextView"
+                android:text="15.2M"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/pale_green"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/views_TextView"
+                android:text="@string/views"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_margin="5dp">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_green"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/likesCountTextView"
+                android:text="75.2M"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/pale_green"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/likes_TextView"
+                android:text="@string/likes"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/followButton"
+        app:layout_constraintEnd_toStartOf="@id/centerTextView"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutMainActivity"
+        android:backgroundTint="@color/pale_green"
+        android:text="@string/follow"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:padding="5dp"
+        android:layout_margin="15dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/centerTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutMainActivity"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/followIconButton"
+        app:layout_constraintStart_toEndOf="@id/centerTextView"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutMainActivity"
+        app:layout_constraintBottom_toTopOf="@id/topTabLineView"
+        android:src="@drawable/ic_baseline_near_me_24"
+        android:textSize="12dp"
+        android:backgroundTint="@color/pale_green"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/topTabLineView"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/followButton"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabLayoutMainActivity"
+        android:backgroundTint="@color/black"
+        app:tabTextColor="@color/grey"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topTabLineView"
+        app:layout_constraintBottom_toTopOf="@id/bottomTabLineView"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/bottomTabLineView"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayoutMainActivity"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPagerMainActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomTabLineView"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
